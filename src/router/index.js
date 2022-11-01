@@ -5,7 +5,13 @@ const routes = [
         path: "/",
         name: "contactbook",
         component: ContactBook,
-    }, {
+    },
+    {
+        path: "/contacts/add",
+        name: "contact.add",
+        component: () => /* webpackChunkName: "contact.create" */ import("@/views/ContactAdd.vue")
+    },
+    {
         path: "/contacts/:id",
         name: "contact.edit",
         component: () => import("@/views/ContactEdit.vue"),
